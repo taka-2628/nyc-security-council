@@ -2,6 +2,11 @@ import { useState, useEffect } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import '../stylesheets/App.css';
+import Home from "./Home";
+import About from "./About";
+import Map from "./Map";
+import SigninSignup from "./SigninSignup";
+import Contribute from "./Contribute";
 
 function App() {
   return (
@@ -10,23 +15,23 @@ function App() {
         <main>
           <Routes>
             <Route exact path="/" element={
-                <p>Home</p>
+                <Home />
               }
             />
             <Route exact path="/about" element={
-                <p>About</p>
+                <About />
               }
             />
             <Route exact path="/Map" element={
-                <p>Map</p>
+                <Map />
               }
             />
             <Route exact path="/signin" element={
-                <p>Signin</p>
+                <SigninSignup />
               }
             />
             <Route exact path="/contibute" element={
-                <p>Contribute</p>
+                <Contribute />
               }
             />
           </Routes>
