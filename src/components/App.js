@@ -1,24 +1,38 @@
-import logo from '../logo.svg';
+import { useState, useEffect } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
 import '../stylesheets/App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter basename={'/nyc-security-council'}>
+      <div className="App">
+        <main>
+          <Routes>
+            <Route exact path="/" element={
+                <p>Home</p>
+              }
+            />
+            <Route exact path="/about" element={
+                <p>About</p>
+              }
+            />
+            <Route exact path="/Map" element={
+                <p>Map</p>
+              }
+            />
+            <Route exact path="/signin" element={
+                <p>Signin</p>
+              }
+            />
+            <Route exact path="/contibute" element={
+                <p>Contribute</p>
+              }
+            />
+          </Routes>
+        </main>
+      </div>
+    </BrowserRouter>
   );
 }
 
