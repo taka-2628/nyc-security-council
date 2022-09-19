@@ -1,14 +1,21 @@
 import { NavLink } from "react-router-dom";
 import '../stylesheets/NavBar.css';
 
-function NavBar( { isHome, setIsHome } ){
+function NavBar(){
   return(
     <nav>
+      <NavLink
+        to="/"
+        exact="true"
+        id="close-btn"
+      >
+        &times;
+      </NavLink>
+      
       <NavLink
         to="/about"
         exact="true"
         className={({ isActive }) => (isActive ? "active-link" : "non-active-link")}
-        onClick={() => setIsHome(false)}
       >
         About
       </NavLink>
@@ -16,7 +23,6 @@ function NavBar( { isHome, setIsHome } ){
         to="/signin"
         exact="true"
         className={({ isActive }) => (isActive ? "active-link" : "non-active-link")}
-        onClick={() => setIsHome(false)}
       >
         Login/Signup
       </NavLink>
@@ -24,7 +30,6 @@ function NavBar( { isHome, setIsHome } ){
         to="/map"
         exact="true"
         className={({ isActive }) => (isActive ? "active-link" : "non-active-link")}
-        onClick={() => setIsHome(false)}
       >
         Map
       </NavLink>
@@ -32,7 +37,6 @@ function NavBar( { isHome, setIsHome } ){
         to="/contribute"
         exact="true"
         className={({ isActive }) => (isActive ? "active-link" : "non-active-link")}
-        onClick={() => setIsHome(false)}
       >
         Contribute
       </NavLink>

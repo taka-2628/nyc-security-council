@@ -3,7 +3,7 @@ import NavHome from "./NavHome";
 function Home(){
   return(
     <div id="home">
-      <p>Home</p>
+      <h1>Home</h1>
       <NavHome />
     </div>
   )

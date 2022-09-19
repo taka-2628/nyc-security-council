@@ -1,3 +1,6 @@
+nav {
+  width: 25%
+}
 nav a {
   display: block;
   color: #ffffff;
@@ -25,6 +28,7 @@ nav a:hover {
   bottom: 20px;
   right: 20px;
   z-index: 10;
+  text-align: right;
 }
 #nav-home a {
   display: inline-block;
@@ -38,4 +42,21 @@ nav a:hover {
   background-color: #ffffff;
   font-style:normal;
   font-weight: 450;
+}
+
+/* CLOSE BTN */
+nav #close-btn {
+  position: absolute;
+  top: 60px;
+  right: calc(20%);
+  width: 46px;
+  font-size: 2.5em;
+  padding: 0;
+  text-align: center;
+  border: 1px solid #ffffff;
+  border-radius: 23px;
+}
+nav #close-btn:hover {
+  font-style: normal;
+  background-color: rgba(255, 255, 255, 0.25);
 }
