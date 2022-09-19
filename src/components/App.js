@@ -1,11 +1,12 @@
 import { useState, useEffect } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-
 import '../stylesheets/App.css';
+
+import NavBar from "./NavBar";
 import Home from "./Home";
 import About from "./About";
 import Map from "./Map";
-import SigninSignup from "./SigninSignup";
+import LoginSignup from "./LoginSignup";
 import Contribute from "./Contribute";
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
     <BrowserRouter basename={'/nyc-security-council'}>
       <div className="App">
         <main>
+          {/*<NavBar />*/}
           <Routes>
             <Route exact path="/" element={
                 <Home />
@@ -27,10 +29,10 @@ function App() {
               }
             />
             <Route exact path="/signin" element={
-                <SigninSignup />
+                <LoginSignup />
               }
             />
-            <Route exact path="/contibute" element={
+            <Route exact path="/contribute" element={
                 <Contribute />
               }
             />

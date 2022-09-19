@@ -1,7 +1,11 @@
+import NavHome from "./NavHome";
 
 function Home(){
   return(
-    <p>Home</p>
+    <div id="home">
+      <p>Home</p>
+      <NavHome />
+    </div>
   )
 }
 

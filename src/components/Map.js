@@ -1,6 +1,12 @@
+import NavBar from "./NavBar";
+
 function Map(){
   return(
-    <p>Map</p>
+    <div id="map">
+      <p>Map</p>
+      <NavBar />
+    </div>
+    
   )
 }
 
