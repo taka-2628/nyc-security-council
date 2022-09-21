@@ -10,7 +10,7 @@ nav a {
 }
 
 nav a:hover {
-  font-style:italic;
+  font-style: italic;
   text-decoration: none;
 }
 
@@ -48,7 +48,7 @@ nav a:hover {
 nav #close-btn {
   position: absolute;
   top: 60px;
-  right: calc(20%);
+  right: calc(12.5%);
   width: 46px;
   font-size: 2.5em;
   padding: 0;

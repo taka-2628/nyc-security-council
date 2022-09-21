@@ -1,8 +1,28 @@
 #signup, #login {
-  width: 50%;
+  width: 37.5%;
   margin: 0 auto;
 }
 
+/* BACK ARROW BTN */
+#back-arrow-btn {
+  position: absolute;
+  top: 60px;
+  left: calc(12.5%);
+  width: 48px;
+  font-size: 2.5em;
+  padding: 0;
+  text-align: center;
+  border: 1px solid #ffffff;
+  border-radius: 24px;
+  color: #ffffff;
+  text-decoration: none;
+}
+#back-arrow-btn:hover {
+  font-style: normal;
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
+/* FORMS */
 .login-signup-container {
   width: 100%;
 }

@@ -3,8 +3,7 @@ import CameraSubmitForm from "./CameraSubmitForm";
 
 function Contribute(){
   return(
-    <div id="contribute" className="width-60">
-      <h1>Contribute</h1>
+    <div id="contribute" className="width-75">
       <NavBar />
       <CameraSubmitForm />
     </div>

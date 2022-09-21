@@ -2,8 +2,7 @@ import NavBar from "./NavBar";
 
 function About(){
   return(
-    <div id="about" className="width-60">
-      <h1>About</h1>
+    <div id="about" className="width-75">
       <NavBar />
       <p>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dolor sit amet consectetur adipiscing elit. Eu consequat ac felis donec. Nulla facilisi morbi tempus iaculis urna. Non diam phasellus vestibulum lorem sed risus ultricies tristique nulla. Neque sodales ut etiam sit amet. Aliquet bibendum enim facilisis gravida neque convallis. Urna id volutpat lacus laoreet non curabitur gravida arcu. Fringilla est ullamcorper eget nulla facilisi etiam dignissim diam. Viverra tellus in hac habitasse platea. Morbi non arcu risus quis varius quam quisque. Posuere sollicitudin aliquam ultrices sagittis. Ut tortor pretium viverra suspendisse. Pellentesque elit ullamcorper dignissim cras tincidunt lobortis feugiat. A diam sollicitudin tempor id eu nisl nunc mi ipsum. Sit amet cursus sit amet dictum sit.
