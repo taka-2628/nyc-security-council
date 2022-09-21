@@ -1,12 +1,10 @@
 #signup, #login {
-  width: 33.333%;
+  width: 50%;
+  margin: 0 auto;
 }
 
 .login-signup-container {
-  width: calc(100% - 50px);
-  padding-top: 25px;
-  padding-right: 25px;
-  padding-left: 25px;
+  width: 100%;
 }
 .login-signup-container h1 {
   margin-top: 0;
@@ -90,6 +88,10 @@
   background-color: #ffffff;
   color: #000000;
   font-weight: 700;
+}
+
+.login-signup-container .l-s-switch {
+  text-align: center;
 }
 
 .login-signup-container .error-div {

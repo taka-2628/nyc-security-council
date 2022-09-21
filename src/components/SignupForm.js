@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from 'react-router-dom';
 import '../stylesheets/LoginSignup.css';
 
-function SignupForm( { /*setCurrentUser*/ } ){
+function SignupForm( { /*setCurrentUser*/ handleSwitch } ){
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [passwordConfirmation, setPasswordConfirmation] = useState("");
@@ -112,6 +112,15 @@ function SignupForm( { /*setCurrentUser*/ } ){
           />
           <input type="submit" value="Signup"/>
         </form>
+
+        <div className="l-s-switch">
+          <span
+            onClick={handleSwitch}
+          >
+            login
+          </span>
+        </div>
+
         <div className="error-div">
           {errors.map((err) => (
               <p key={err} >{err}</p>
