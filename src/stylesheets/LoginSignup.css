@@ -31,6 +31,23 @@
   margin-bottom: 12px;
   font-size: 2.5em;
 }
+
+.login-signup-container .hr-div {
+  text-align: left;
+}
+.login-signup-container .hr-div div{
+  display: inline-block;
+  width: 50%;
+}
+.login-signup-container .hr-div hr {
+  border: none;
+  border-top: 1pt solid #ffffff;
+}
+.login-signup-container .hr-div #left,
+.login-signup-container .hr-div #right {
+  border-top: 2pt solid #ffffff;
+}
+
 .login-signup-container form {
   text-align: left;
 }

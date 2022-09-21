@@ -36,6 +36,10 @@ function LoginForm( { /*setCurrentUser*/ handleSwitch } ){
     <div id="login">
       <div className="login-signup-container">
         <h1>Login</h1>
+        <div className="hr-div">
+          <div><hr id="left" /></div>
+          <div><hr/></div>
+        </div>
         <form onSubmit={handleSubmit}>
           <label htmlFor="username">Username</label>
           <input
