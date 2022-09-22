@@ -1,11 +1,28 @@
 import { useState } from "react";
+import { createRoot } from 'react-dom/client';
 import Map, {Source, Layer} from 'react-map-gl';
-import 'mapbox-gl/dist/mapbox-gl.css'
+import 'mapbox-gl/dist/mapbox-gl.css';
+import '../stylesheets/Map.css';
 
 import ReturnBtn from "./Buttons/ReturnBtn";
 
 function MapContainer( { MAPBOX_TOKEN } ){
   const [viewport, setViewport] = useState();
+  
+  const settings = {
+    scrollZoom: true,
+    boxZoom: true,
+    dragRotate: true,
+    dragPan: true,
+    keyboard: true,
+    doubleClickZoom: true,
+    touchZoomRotate: true,
+    touchPitch: true,
+    minZoom: 11,
+    maxZoom: 20,
+    minPitch: 0,
+    maxPitch: 85
+  }
 
   const geojson = {
     type: 'FeatureCollection',
@@ -24,25 +41,24 @@ function MapContainer( { MAPBOX_TOKEN } ){
   };
   
   return(
-    <div id="map-container" className="width-75">
+    <div id="map-container">
       <ReturnBtn />
       <Map 
         initialViewState={{
-          longitude: -122.45,
-          latitude: 37.78,
-          zoom: 14
+          longitude: -73.96,
+          latitude: 40.75,
+          zoom: 12,
+          pitch: 50
         }}
-        style={{width: 1000, height: 800}}
-        mapStyle="mapbox://styles/mapbox/streets-v9"
+        {...settings}
+        mapStyle="mapbox://styles/mapbox/dark-v9"
         mapboxAccessToken={MAPBOX_TOKEN}
       >
         <Source id="my-data" type="geojson" data={geojson}>
           <Layer {...layerStyle} />
         </Source>
       </Map>
-  
     </div>
-    
   )
 }
 
