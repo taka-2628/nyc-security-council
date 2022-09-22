@@ -2,8 +2,8 @@ import { useState } from "react";
 
 import LoginForm from "./LoginForm";
 import SignupForm from "./SignupForm";
-import CloseBtn from "./CloseBtn";
-import ReturnBtn from "./ReturnBtn";
+import CloseBtn from "./Buttons/CloseBtn";
+import ReturnBtn from "./Buttons/ReturnBtn";
 
 function LoginSignup(){
   const [ isLogin, setIsLogin ] = useState(true);

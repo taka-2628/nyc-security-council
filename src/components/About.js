@@ -1,7 +1,7 @@
 import '../stylesheets/About.css';
 
 import NavBar from "./NavBar";
-import CloseBtn from "./CloseBtn";
+import CloseBtn from "./Buttons/CloseBtn";
 
 function About(){
   return(
