@@ -7,7 +7,7 @@ function NavBar(){
       <NavLink
         to="/"
         exact="true"
-        id="close-btn"
+        className="close-btn"
       >
         &times;
       </NavLink>

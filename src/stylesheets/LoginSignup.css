@@ -1,6 +1,7 @@
 #signup, #login {
-  width: 37.5%;
-  margin: 0 auto;
+  width: 50%;
+  margin: 0px auto;
+  padding: 60px;
 }
 
 /* BACK ARROW BTN */
@@ -22,113 +23,158 @@
   background-color: rgba(255, 255, 255, 0.25);
 }
 
-/* FORMS */
+#login-signup .close-btn {
+  position: absolute;
+  top: 60px;
+  right: calc(12.5%);
+  height: 48px;
+  width: 48px;
+  font-size: 2.5em;
+  padding: 0;
+  text-align: center;
+  border: 1px solid #ffffff;
+  border-radius: 24px;
+  color: #ffffff;
+  text-decoration: none;
+}
+#login-signup .close-btn:hover {
+  font-style: normal;
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
 .login-signup-container {
   width: 100%;
 }
-.login-signup-container h1 {
-  margin-top: 0;
-  margin-bottom: 12px;
-  font-size: 2.5em;
-}
 
-.login-signup-container .hr-div {
+.login-signup-container .title-hr-div {
   text-align: left;
+  margin-bottom: 60px;
 }
-.login-signup-container .hr-div div{
+.login-signup-container .title-hr-div div{
   display: inline-block;
   width: 50%;
 }
-.login-signup-container .hr-div hr {
-  border: none;
-  border-top: 1pt solid #ffffff;
+.login-signup-container .title-hr-div .title-wrapper {
+  width: 100%;
+  text-align: center;
 }
-.login-signup-container .hr-div #left,
-.login-signup-container .hr-div #right {
-  border-top: 2pt solid #ffffff;
+.login-signup-container .title-hr-div .title-wrapper h4{
+  margin-bottom: 10px;
+}
+.login-signup-container .title-hr-div .l-s-not-selected h4 {
+  margin-bottom: 10px;
+  color:rgba(255,255,255, 0.5)
+}
+.login-signup-container .title-hr-div .l-s-not-selected h4:hover {
+  color:rgba(255,255,255, 0.75)
 }
 
+.login-signup-container .title-hr-div hr {
+  border: none;
+  border-top: 1.5pt solid rgba(255,255,255, 0.35);
+}
+.login-signup-container .title-hr-div #left,
+.login-signup-container .title-hr-div #right {
+  border-top: 1.5pt solid #ffffff;
+}
+
+/* FORMS */
 .login-signup-container form {
   text-align: left;
-}
-.login-signup-container label {
-  font-size: 0.75em;
 }
 .login-signup-container input{
   width: calc(100% - 14px);
   display: block;
-  margin: 6px 0px 12px 0px;
-  padding: 6px;
-  border: 1px solid #ffffff;
-  background-color: #ffffff;
-  color: #000000;
-  font-family: 'Source Code Pro';
+  margin: 18px 0px 18px 0px;
+  padding: 12px 6px;
+  border: none;
+  border-bottom: 1.5pt solid rgba(255,255,255, 0.35);
+  background-color: #000000;
+  color: #ffffff;
+  font-family: 'Arimo', sans-serif;
   font-size: 0.9em;
 }
 .login-signup-container input:focus {
-  height: calc(1.25em - 1.5pt);
-  width: calc(100% - 16px);
   outline: none;
-  border: 2px solid #ffffff;
+  border-bottom: 1.5pt solid rgba(255,255,255, 1);
 }
 .login-signup-container input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-  color: rgba(0,0,0, 0.75);
+  color: rgba(255,255,255, 0.75);
   opacity: 1; /* Firefox */
-  font-family: 'Source Code Pro';
+  font-family: 'Arimo', sans-serif;
 }
 .login-signup-container input:-ms-input-placeholder { /* Internet Explorer 10-11 */
-  color: rgba(0,0,0, 0.75);
-  font-family: 'Source Code Pro';
+  color: rgba(255,255,255, 0.75);
+  font-family: 'Arimo', sans-serif;
 }
 .login-signup-container input::-ms-input-placeholder { /* Microsoft Edge */
-  color: rgba(0,0,0, 0.75);
-  font-family: 'Source Code Pro';
+  color: rgba(255,255,255, 0.75);
+  font-family: 'Arimo', sans-serif;
 }
 
-.login-signup-container textarea {
-  height: 3em;
-  width: calc(100% - 14px);
-  margin: 6px 0px 12px 0px;
-  padding: 6px;
-  border: 1px solid #ffffff;
-  background-color: #ffffff;
-  color: #000000;
-  font-family: 'Source Code Pro';
-  font-size: 0.9em;
-  letter-spacing: normal;
-}
-.login-signup-container textarea:focus {
-  height: calc(3em - 1.5pt);
-  width: calc(100% - 16px);
-  outline: none;
-  border: 2px solid #ffffff;
-}
-.login-signup-container textarea::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-  color: rgba(0,0,0, 0.75);
-  opacity: 1; /* Firefox */
-  font-family: 'Source Code Pro';
-}
-.login-signup-container textarea:-ms-input-placeholder { /* Internet Explorer 10-11 */
-  color: rgba(0,0,0, 0.75);
-  font-family: 'Source Code Pro';
-}
-.login-signup-container textarea::-ms-input-placeholder { /* Microsoft Edge */
-  color: rgba(0,0,0, 0.75);
-  font-family: 'Source Code Pro';
-}
-
-.login-signup-container input[type="submit"]{
+.login-signup-container .submit-cont {
+  position: relative;
+  top: 100px;
   width: 100%;
-  margin-top: 24px;
-  height: 32px;
-  border: 1px solid #ffffff;
-  background-color: #ffffff;
-  color: #000000;
+}
+.login-signup-container .submit-cont div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.login-signup-container input[type="submit"]{
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+  width: 60px;
+  height: 60px;
+  border: none;
+  color: #ffffff;
+  font-size: 50px;
   font-weight: 700;
+  vertical-align: bottom;
+  animation: MoveUpDown 2s linear infinite;
 }
 
-.login-signup-container .l-s-switch {
+@keyframes MoveUpDown {
+  0% {
+    top: 0;
+    left: 0;
+  }
+  50% {
+    top: 20px;
+    left: 0;
+  }
+  100% {
+    top: 0;
+    left: 0;
+  }
+}
+
+.login-signup-container .l-s-centered {
+  margin-top: 36px;
+  margin-bottom: 12px;
   text-align: center;
+}
+.login-signup-container .l-s-centered p {
+  color:rgba(255,255,255, 0.75);
+  font-size: 0.9em;
+}
+.login-signup-container .l-s-centered p:hover {
+  text-decoration: underline;
+}
+.login-signup-container .l-s-centered p span {
+  color:rgba(255,255,255, 1);
+  font-size: 0.9em;
+}
+
+.login-signup-container #forgot-password {
+  margin-top: 0;
+}
+.login-signup-container #forgot-password p{
+  margin-top: 4px;
 }
 
 .login-signup-container .error-div {

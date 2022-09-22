@@ -35,13 +35,21 @@ function LoginForm( { /*setCurrentUser*/ handleSwitch } ){
   return (
     <div id="login">
       <div className="login-signup-container">
-        <h1>Login</h1>
-        <div className="hr-div">
-          <div><hr id="left" /></div>
-          <div><hr/></div>
+        <div className="title-hr-div">
+          <div>
+            <div className="title-wrapper">
+              <h4>Sign in</h4>
+            </div>
+            <hr id="left" />
+          </div>
+          <div>
+            <div className="title-wrapper l-s-not-selected">
+              <h4 onClick={handleSwitch}>Sign up</h4>
+            </div>
+            <hr/>
+          </div>
         </div>
         <form onSubmit={handleSubmit}>
-          <label htmlFor="username">Username</label>
           <input
             type="text"
             className="username"
@@ -50,7 +58,6 @@ function LoginForm( { /*setCurrentUser*/ handleSwitch } ){
             placeholder="Username"
             onChange={(e) => setUsername(e.target.value)}
           />
-          <label htmlFor="password">Password</label>
           <input
             type="password"
             className="password"
@@ -59,16 +66,26 @@ function LoginForm( { /*setCurrentUser*/ handleSwitch } ){
             placeholder="Password"
             onChange={(e) => setPassword(e.target.value)}
           />
-          <input type="submit" value="Login"/>
+          <div className="submit-cont">
+            <div>
+              <input type="submit" value="&#x203A;"/>
+            </div>
+          </div>
         </form>
 
-        <div className="l-s-switch">
-          <span
+        <div className="l-s-centered" id="forgot-password">
+          <p>forgot your <span>password?</span></p>
+        </div>
+
+        <div className="l-s-centered">
+          <p
             onClick={handleSwitch}
           >
             signup
-          </span>
+          </p>
         </div>
+
+
         
         <div className="error-div">
           <p>{error}</p>

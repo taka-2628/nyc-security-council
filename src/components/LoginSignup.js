@@ -18,12 +18,20 @@ function LoginSignup(){
       {/*<NavBar />*/}
       <>
       <NavLink
+        to="/"
+        exact="true"
+        className="close-btn"
+      >
+        &times;
+      </NavLink>
+      <NavLink
         to="/about"
         exact="true"
         id="back-arrow-btn"
       >
         &#8592;
       </NavLink>
+      
       
       </>
       { isLogin ? <LoginForm handleSwitch={handleSwitch}/> : <SignupForm handleSwitch={handleSwitch}/> }
