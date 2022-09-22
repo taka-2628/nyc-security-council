@@ -5,9 +5,12 @@ import '../stylesheets/App.css';
 import NavBar from "./NavBar";
 import Home from "./Home";
 import About from "./About";
-import Map from "./Map";
+import MapContainer from "./MapContainer";
 import LoginSignup from "./LoginSignup";
 import Contribute from "./Contribute";
+
+
+const MAPBOX_TOKEN = 'pk.eyJ1IjoidGgtdGgiLCJhIjoiY2t3N2Q1YmNxOW8wajMxczE4ZndqaDRuNCJ9.UWfb1rN9Hl6lBXJGLC6Vrw'; 
 
 function App() {
   return (
@@ -25,7 +28,7 @@ function App() {
               }
             />
             <Route exact path="/Map" element={
-                <Map />
+                <MapContainer MAPBOX_TOKEN={MAPBOX_TOKEN}/>
               }
             />
             <Route exact path="/signin" element={
