@@ -5,14 +5,6 @@ function NavBar(){
   return(
     <nav>
       <NavLink
-        to="/"
-        exact="true"
-        className="close-btn"
-      >
-        &times;
-      </NavLink>
-      
-      <NavLink
         to="/about"
         exact="true"
         className={({ isActive }) => (isActive ? "active-link" : "non-active-link")}
