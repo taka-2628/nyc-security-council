@@ -1,9 +1,7 @@
-
 .close-btn,
-.back-arrow-btn {
+.return-btn {
   position: absolute;
   top: 60px;
-  left: calc(12.5%);
   height: 48px;
   width: 48px;
   font-size: 2.5em;
@@ -14,8 +12,16 @@
   color: #ffffff;
   text-decoration: none;
 }
+
+.close-btn {
+  right: calc(12.5%);
+}
+.return-btn {
+  left: calc(12.5%);
+}
+
 .close-btn:hover,
-.back-arrow-btn:hover {
+.return-btn:hover {
   font-style: normal;
   background-color: rgba(255, 255, 255, 0.25);
 }

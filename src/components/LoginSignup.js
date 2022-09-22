@@ -1,9 +1,9 @@
 import { useState } from "react";
-import { NavLink } from "react-router-dom";
 
-import NavBar from "./NavBar";
 import LoginForm from "./LoginForm";
 import SignupForm from "./SignupForm";
+import CloseBtn from "./CloseBtn";
+import ReturnBtn from "./ReturnBtn";
 
 function LoginSignup(){
   const [ isLogin, setIsLogin ] = useState(true);
@@ -15,25 +15,8 @@ function LoginSignup(){
 
   return(
     <div id="login-signup" className="width-75">
-      {/*<NavBar />*/}
-      <>
-      <NavLink
-        to="/"
-        exact="true"
-        className="close-btn"
-      >
-        &times;
-      </NavLink>
-      <NavLink
-        to="/about"
-        exact="true"
-        id="back-arrow-btn"
-      >
-        &#8592;
-      </NavLink>
-      
-      
-      </>
+      <CloseBtn />
+      <ReturnBtn />
       { isLogin ? <LoginForm handleSwitch={handleSwitch}/> : <SignupForm handleSwitch={handleSwitch}/> }
     </div>
   )
