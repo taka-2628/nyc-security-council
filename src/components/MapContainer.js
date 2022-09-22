@@ -4,8 +4,8 @@ import Map, {Source, Layer} from 'react-map-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';
 import '../stylesheets/Map.css';
 
-import ReturnBtn from "./Buttons/ReturnBtn";
 import NavFullScreen from "./NavFullScreen";
+import MapControlPanel from "./MapControlPanel";
 
 function MapContainer( { MAPBOX_TOKEN } ){
   const [viewport, setViewport] = useState();
@@ -43,8 +43,8 @@ function MapContainer( { MAPBOX_TOKEN } ){
   
   return(
     <div id="map-container">
-      <ReturnBtn />
       <NavFullScreen />
+      <MapControlPanel />
       <Map 
         initialViewState={{
           longitude: -73.96,
