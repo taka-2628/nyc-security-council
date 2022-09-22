@@ -3,7 +3,7 @@ import '../stylesheets/NavBar.css';
 
 function NavFullScreen(){
   return(
-    <nav id="nav-home">
+    <nav id="nav-fullscreen">
       <NavLink
         to="/about"
         exact="true"

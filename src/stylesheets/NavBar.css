@@ -23,41 +23,24 @@ nav a:hover {
 }
 
 /* NAV FULLSCREEN */
-#nav-home {
+#nav-fullscreen {
   position: fixed;
   bottom: 20px;
   right: 20px;
   z-index: 10;
   text-align: right;
 }
-#nav-home a {
+#nav-fullscreen a {
   display: inline-block;
   margin-left: 12px;
   padding: 10px;
   border: 1px solid #ffffff;
   border-radius: 20px;
+  font-size: 1.15em;
 }
-#nav-home a:hover {
+#nav-fullscreen a:hover {
   color: #000000;
   background-color: #ffffff;
   font-style:normal;
   font-weight: 450;
-}
-
-/* CLOSE BTN */
-nav .close-btn {
-  position: absolute;
-  top: 60px;
-  right: calc(12.5%);
-  height: 48px;
-  width: 48px;
-  font-size: 2.5em;
-  padding: 0;
-  text-align: center;
-  border: 1px solid #ffffff;
-  border-radius: 24px;
-}
-nav .close-btn:hover {
-  font-style: normal;
-  background-color: rgba(255, 255, 255, 0.25);
 }

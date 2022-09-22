@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import '../stylesheets/App.css';
 
-import NavBar from "./NavBar";
 import Home from "./Home";
 import About from "./About";
 import MapContainer from "./MapContainer";
@@ -17,7 +16,6 @@ function App() {
     <BrowserRouter basename={'/nyc-security-council'}>
       <div className="App">
         <main>
-          {/*<NavBar />*/}
           <Routes>
             <Route exact path="/" element={
                 <Home />

@@ -5,6 +5,7 @@ import 'mapbox-gl/dist/mapbox-gl.css';
 import '../stylesheets/Map.css';
 
 import ReturnBtn from "./Buttons/ReturnBtn";
+import NavFullScreen from "./NavFullScreen";
 
 function MapContainer( { MAPBOX_TOKEN } ){
   const [viewport, setViewport] = useState();
@@ -43,6 +44,7 @@ function MapContainer( { MAPBOX_TOKEN } ){
   return(
     <div id="map-container">
       <ReturnBtn />
+      <NavFullScreen />
       <Map 
         initialViewState={{
           longitude: -73.96,
