@@ -1,9 +1,9 @@
 import NavFullScreen from "./NavFullScreen";
+import '../stylesheets/Home.css';
 
 function Home(){
   return(
     <div id="home">
-      <h1>Home</h1>
       <NavFullScreen />
     </div>
   )
