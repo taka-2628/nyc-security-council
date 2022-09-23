@@ -64,36 +64,40 @@ function CameraSubmitForm( { /*currentUser*/ } ){
 
   return (
     <div id="submit-camera">
-      <h1>Submit Surveillance Camera</h1>
+      <h3>Submit Surveillance Camera</h3>
 
       <form onSubmit={handleSubmit}>
-        <div className="half-width div-left">
-          <label htmlFor="p-title">Title</label>
-          <input 
-            type="text" 
-            id="p-title" 
-            name="title"
-            value={title}
-            placeholder="Title of your project.." 
-            onChange={(e) => setTitle(e.target.value)}
-          />
-        </div>
         
-        <div>
-          <button onClick={() => getLocation()}>Get Your Geolocation</button>
-          { 
-            coordinates ? 
-            <div>
-              <span>Latitude: {coordinates.latitude}</span>
-              <span>Longitude: {coordinates.longitude}</span>
-            </div> : 
-            null
-          }
-          { coordiError ? <span>{coordiError}</span> : null}
+        <div id="location-info">
+          <div id="geo-locator-cont">
+            <span>Are you on-site?</span>
+            <button id="geo-btn"onClick={() => getLocation()}>Get Your Geolocation</button>
+            <div className="lat-long-cont"><p>Latitude: {coordinates ? <span>{coordinates.latitude}</span> : null}</p><hr/></div> 
+            <div className="lat-long-cont"><p>Longitude: {coordinates ? <span>{coordinates.longitude}</span> : null}</p><hr/></div> 
+            { coordiError ? <span>{coordiError}</span> : null}
+          </div>
+          <div id="address">
+            <span>Or provide address or intersection, or street:</span>
+            <input 
+              type="text"
+              id="address"
+              name="address"
+              placeholder="Address, intersection or street.."
+            />
+          </div>
         </div>
 
+        <fieldset id="nbhd-selection">
+          <label htmlFor="neighborhoods">Choose a neighborhood:</label>
+          <select name="neighborhoods" id="neighborhoods">
+            <option value="volvo">Volvo</option>
+            <option value="saab">Saab</option>
+            <option value="opel">Opel</option>
+            <option value="audi">Audi</option>
+          </select>
+        </fieldset>
+
         <div className="half-width div-right">
-          <label htmlFor="p-image">Image</label>
           <input 
             type="text" 
             id="p-image" 
@@ -104,15 +108,16 @@ function CameraSubmitForm( { /*currentUser*/ } ){
           />
         </div>
         
-        <label htmlFor="p-desc">Camera Description</label>
-        <textarea 
-          id="c-desc" 
-          name="description"
-          value={description}
-          placeholder="Describe the surveillance camera.."
-          onChange={(e) => setDescription(e.target.value)}
-        >
-        </textarea>
+        <div className="half-width div-right">
+          <input 
+            id="c-desc" 
+            name="description"
+            value={description}
+            placeholder="Describe the surveillance camera.."
+            onChange={(e) => setDescription(e.target.value)}
+          >
+          </input>
+        </div>
       
         <input type="submit" value="Submit"/>
       </form>

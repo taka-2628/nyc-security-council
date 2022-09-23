@@ -1,0 +1,107 @@
+
+#submit-camera {
+  width: 50%;
+  margin: 0px auto;
+  padding: 60px;
+}
+
+#submit-camera input {
+  width: calc(100% - 14px);
+  display: block;
+  margin: 18px 0px;
+  padding: 12px 6px;
+  border: none;
+  border-bottom: 1.5pt solid rgba(255,255,255, 0.35);
+  background-color: #000000;
+  color: #ffffff;
+  font-family: 'Arimo', sans-serif;
+  font-size: 0.9em;
+}
+#submit-camera input:focus {
+  outline: none;
+  border-bottom: 1.5pt solid rgba(255,255,255, 1);
+}
+#submit-camera input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: rgba(255,255,255, 0.75);
+  opacity: 1; /* Firefox */
+  font-family: 'Arimo', sans-serif;
+}
+#submit-camera input:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: rgba(255,255,255, 0.75);
+  font-family: 'Arimo', sans-serif;
+}
+#submit-camera input::-ms-input-placeholder { /* Microsoft Edge */
+  color: rgba(255,255,255, 0.75);
+  font-family: 'Arimo', sans-serif;
+}
+
+#location-info {
+  display: flex;
+  margin: 24px 0px;
+}
+#geo-locator-cont {
+  width: calc(33.333% - 12px);
+  padding-right: 12px;
+  border-right: 1.5pt solid rgba(255,255,255, 0.35);;
+}
+#address {
+  width: calc(66.666% - 12px);
+  margin-left: 12px;
+}
+#geo-locator-cont span,
+#address span {
+  display: block;
+  margin-left: 6px;
+  font-size: 0.9em;
+  color:rgba(255,255,255, 0.75);
+}
+
+#geo-locator-cont #geo-btn {
+  width: 100%;
+  margin-top: 12px;
+  margin-bottom: 12px;
+  padding: 6px;
+  border: 1.5pt solid rgba(255,255,255, 0.35);
+  background-color: rgba(255,255,255, 0.125);
+  color: rgba(255,255,255, 0.75);
+  cursor: pointer;
+}
+#geo-locator-cont .lat-long-cont p{
+  display: inline-block;
+  margin: 4px 0px;
+  padding-left: 6px;
+  font-size: 0.9em;
+  color:rgba(255,255,255, 0.75);
+}
+#geo-locator-cont .lat-long-cont span {
+  display: inline-block;
+}
+#geo-locator-cont .lat-long-cont hr {
+  margin-top: 0;
+  border: none;
+  border-bottom: 1pt solid rgba(255,255,255, 0.35);
+}
+#address input {
+  margin-top: 6px;
+}
+
+#nbhd-selection {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+label {
+  padding-left: 6px;
+  font-size: 0.9em;
+  color:rgba(255,255,255, 0.75);
+}
+select {
+  margin-left: 12px;
+  padding: 12px 6px;
+  font-size: 0.9em;
+  color:rgba(255,255,255, 0.75);
+  background-color: #000000;
+}
+select:focus {
+  outline: none;
+}
