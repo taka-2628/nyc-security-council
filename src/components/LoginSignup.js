@@ -1,9 +1,11 @@
 import { useState } from "react";
 
+import NavBar from "./NavBar";
 import LoginForm from "./LoginForm";
 import SignupForm from "./SignupForm";
 import CloseBtn from "./Buttons/CloseBtn";
-import ReturnBtn from "./Buttons/ReturnBtn";
+
+
 
 function LoginSignup(){
   const [ isLogin, setIsLogin ] = useState(true);
@@ -15,8 +17,8 @@ function LoginSignup(){
 
   return(
     <div id="login-signup" className="width-75">
+      <NavBar />
       <CloseBtn />
-      <ReturnBtn />
       { isLogin ? <LoginForm handleSwitch={handleSwitch}/> : <SignupForm handleSwitch={handleSwitch}/> }
     </div>
   )
