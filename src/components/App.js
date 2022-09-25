@@ -14,7 +14,7 @@ const MAPBOX_TOKEN = 'pk.eyJ1IjoidGgtdGgiLCJhIjoiY2t3N2Q1YmNxOW8wajMxczE4ZndqaDR
 function App() {
   return (
     <BrowserRouter basename={'/nyc-security-council'}>
-      <div className="App">
+      <div className="app">
         <main>
           <Routes>
             <Route exact path="/" element={

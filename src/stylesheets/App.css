@@ -1,3 +1,4 @@
+
 .width-75 {
   width: 75%;
   margin: 60px auto;
@@ -24,3 +25,23 @@
   }
 }
 */
+
+/* GRID LAYOUT */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 10px;
+  grid-auto-rows: minmax(100px, auto);
+}
+
+.two-four {
+  grid-column: 2 / 4;
+}
+
+.five-nine {
+  grid-column: 5 / 9;
+  /*
+  grid-column-start: 5;
+  grid-column-end: 10;
+  */
+}
