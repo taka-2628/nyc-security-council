@@ -16,7 +16,7 @@ function LoginSignup(){
   }
 
   return(
-    <div id="login-signup" className="width-75">
+    <div id="login-signup" className="grid-container">
       <NavBar />
       <CloseBtn />
       { isLogin ? <LoginForm handleSwitch={handleSwitch}/> : <SignupForm handleSwitch={handleSwitch}/> }

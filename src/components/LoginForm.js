@@ -33,7 +33,7 @@ function LoginForm( { /*setCurrentUser*/ handleSwitch } ){
   }
 
   return (
-    <div id="login">
+    <div id="login" className="five-nine">
       <div className="login-signup-container">
         <div className="title-hr-div">
           <div>
