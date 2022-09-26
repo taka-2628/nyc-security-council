@@ -20,10 +20,11 @@
 }
 .login-signup-container .title-hr-div .title-wrapper h4{
   margin-bottom: 10px;
+  cursor: pointer;
 }
 .login-signup-container .title-hr-div .l-s-not-selected h4 {
   margin-bottom: 10px;
-  color:rgba(255,255,255, 0.5)
+  color:rgba(255,255,255, 0.5);
 }
 .login-signup-container .title-hr-div .l-s-not-selected h4:hover {
   color:rgba(255,255,255, 0.75)
@@ -53,6 +54,7 @@
   color: #ffffff;
   font-family: 'Arimo', sans-serif;
   font-size: 0.9em;
+  text-align: right;
 }
 .login-signup-container input:focus {
   outline: none;
@@ -62,14 +64,17 @@
   color: rgba(255,255,255, 0.75);
   opacity: 1; /* Firefox */
   font-family: 'Arimo', sans-serif;
+  text-align: left;
 }
 .login-signup-container input:-ms-input-placeholder { /* Internet Explorer 10-11 */
   color: rgba(255,255,255, 0.75);
   font-family: 'Arimo', sans-serif;
+  text-align: left;
 }
 .login-signup-container input::-ms-input-placeholder { /* Microsoft Edge */
   color: rgba(255,255,255, 0.75);
   font-family: 'Arimo', sans-serif;
+  text-align: left;
 }
 
 .login-signup-container .submit-cont {
@@ -91,10 +96,16 @@
   width: 60px;
   height: 60px;
   border: none;
-  color: #ffffff;
+  color: rgba(255,255,255, 0.5);
   font-size: 50px;
   font-weight: 700;
+  text-align: center;
   vertical-align: bottom;
+}
+
+.login-signup-container input[type="submit"].active-submit {
+  color: #ffffff;
+  cursor: pointer;
   animation: MoveUpDown 2s linear infinite;
 }
 
@@ -135,6 +146,7 @@
 }
 .login-signup-container #forgot-password p{
   margin-top: 4px;
+  cursor: pointer;
 }
 
 .login-signup-container .error-div {

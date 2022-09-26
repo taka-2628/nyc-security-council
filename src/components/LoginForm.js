@@ -68,7 +68,11 @@ function LoginForm( { /*setCurrentUser*/ handleSwitch } ){
           />
           <div className="submit-cont">
             <div>
-              <input type="submit" value="&#x203A;"/>
+              <input 
+                type="submit" 
+                value="&#x203A;"
+                className={ ( username && password) ? "active-submit" : ""}
+              />
             </div>
           </div>
         </form>

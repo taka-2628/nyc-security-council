@@ -113,7 +113,11 @@ function SignupForm( { /*setCurrentUser*/ handleSwitch } ){
           */}
           <div className="submit-cont">
             <div>
-              <input type="submit" value="&#x203A;"/>
+              <input 
+                type="submit" 
+                value="&#x203A;"
+                className={ ( username && password && passwordConfirmation && email ) ? "active-submit" : ""}
+              />
             </div>
           </div>
         </form>
