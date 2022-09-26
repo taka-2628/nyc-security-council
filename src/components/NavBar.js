@@ -3,7 +3,7 @@ import '../stylesheets/NavBar.css';
 
 function NavBar(){
   return(
-    <nav className="two-four">
+    <nav className="three-five">
       <NavLink
         to="/about"
         exact="true"
