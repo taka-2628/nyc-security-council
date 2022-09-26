@@ -118,14 +118,6 @@ function SignupForm( { /*setCurrentUser*/ handleSwitch } ){
           </div>
         </form>
 
-        <div className="l-s-centered">
-          <p
-            onClick={handleSwitch}
-          >
-            login
-          </p>
-        </div>
-
         <div className="error-div">
           {errors.map((err) => (
               <p key={err} >{err}</p>

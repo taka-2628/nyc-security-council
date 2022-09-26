@@ -76,16 +76,6 @@ function LoginForm( { /*setCurrentUser*/ handleSwitch } ){
         <div className="l-s-centered" id="forgot-password">
           <p>forgot your <span>password?</span></p>
         </div>
-
-        <div className="l-s-centered">
-          <p
-            onClick={handleSwitch}
-          >
-            signup
-          </p>
-        </div>
-
-
         
         <div className="error-div">
           <p>{error}</p>
