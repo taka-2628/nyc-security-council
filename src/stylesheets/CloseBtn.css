@@ -1,6 +1,6 @@
 .close-btn {
   position: absolute;
-  top: calc(100px + 10px);
+  top: 12.5vh;
   right: calc(16.6666%);
   height: 48px;
   width: 48px;
