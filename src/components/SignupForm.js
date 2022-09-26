@@ -47,7 +47,7 @@ function SignupForm( { /*setCurrentUser*/ handleSwitch } ){
   }
 
   return (
-    <div id="signup">
+    <div id="signup" className="five-nine">
       <div className="login-signup-container">
         <div className="title-hr-div">
           <div>
