@@ -1,3 +1,10 @@
 .paragraph-wrapper {
-  margin: 0px auto;
+  margin: 12.5vh auto;
+  height: 75vh;
+  overflow: auto;
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+  scrollbar-width: none;  /* Firefox */
+}
+.paragraph-wrapper::-webkit-scrollbar { 
+  display: none;  /* Safari and Chrome */
 }
