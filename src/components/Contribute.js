@@ -6,8 +6,8 @@ import CloseBtn from "./Buttons/CloseBtn";
 
 function Contribute(){
   return(
-    <div id="contribute" className="width-75">
-      <NavBar />
+    <div id="contribute" className="grid-container">
+      { /* <NavBar /> */}
       <CloseBtn />
       <CameraSubmitForm />
     </div>
