@@ -1,6 +1,6 @@
 .close-btn {
   position: absolute;
-  top: 12.5vh;
+  top: 10vh;
   right: calc(16.6666%);
   height: 48px;
   width: 48px;
@@ -12,7 +12,6 @@
   color: #ffffff;
   text-decoration: none;
 }
-
 
 .close-btn:hover {
   font-style: normal;
