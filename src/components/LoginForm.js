@@ -44,7 +44,7 @@ function LoginForm( { /*setCurrentUser*/ handleSwitch } ){
           </div>
           <div>
             <div className="title-wrapper l-s-not-selected">
-              <h4 onClick={handleSwitch}>Sign up</h4>
+              <h4 onClick={handleSwitch}>Register</h4>
             </div>
             <hr/>
           </div>
