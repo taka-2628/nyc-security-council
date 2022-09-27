@@ -1,14 +1,15 @@
 import { NavLink } from "react-router-dom";
-import '../../stylesheets/CloseBtn.css';
+import '../../stylesheets/CloseReturnBtn.css';
 
 function CloseBtn(){
   return (
     <NavLink
     to="/"
     exact="true"
-    className="close-btn"
+    id="close"
+    className="close-return-btn"
     >
-      &times;
+      <span>&times;</span>
     </NavLink>
   )
 }

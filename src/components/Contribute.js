@@ -1,14 +1,14 @@
 import '../stylesheets/Contribute.css';
 
-import NavBar from "./NavBar";
 import CameraSubmitForm from "./CameraSubmitForm";
 import CloseBtn from "./Buttons/CloseBtn";
+import ReturnBtn from './Buttons/ReturnBtn';
 
 function Contribute(){
   return(
     <div id="contribute" className="grid-container">
-      { /* <NavBar /> */}
       <CloseBtn />
+      <ReturnBtn />
       <CameraSubmitForm />
     </div>
   )
