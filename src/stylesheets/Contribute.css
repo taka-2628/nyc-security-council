@@ -1,105 +1,128 @@
-
-#submit-camera {
+#upload-form-cont {
   margin-top: 20vh;
+  background-color: #ffffff;
+  border-radius: 15px;
 }
 
-#submit-camera input {
-  width: calc(100% - 14px);
-  display: block;
-  margin: 18px 0px;
-  padding: 12px 6px;
-  border: none;
-  border-bottom: 1.5pt solid rgba(255,255,255, 0.35);
-  background-color: #000000;
-  color: #ffffff;
-  font-family: 'Arimo', sans-serif;
-  font-size: 0.9em;
-}
-#submit-camera input:focus {
-  outline: none;
-  border-bottom: 1.5pt solid rgba(255,255,255, 1);
-}
-#submit-camera input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-  color: rgba(255,255,255, 0.75);
-  opacity: 1; /* Firefox */
-  font-family: 'Arimo', sans-serif;
-}
-#submit-camera input:-ms-input-placeholder { /* Internet Explorer 10-11 */
-  color: rgba(255,255,255, 0.75);
-  font-family: 'Arimo', sans-serif;
-}
-#submit-camera input::-ms-input-placeholder { /* Microsoft Edge */
-  color: rgba(255,255,255, 0.75);
-  font-family: 'Arimo', sans-serif;
+.upload-form-wrapper {
+  width: calc(100% - ( 16.6666vw));
+  margin: 80px auto;
 }
 
-#location-info {
-  display: flex;
-  margin: 24px 0px;
+/* HEAD */
+.upload-form-wrapper .title-hr-div {
+  text-align: left;
 }
-#geo-locator-cont {
-  width: calc(33.333% - 12px);
-  padding-right: 12px;
-  border-right: 1.5pt solid rgba(255,255,255, 0.35);;
+.upload-form-wrapper .title-hr-div div{
+  display: inline-block;
+  width: 50%;
 }
-#address {
-  width: calc(66.666% - 12px);
-  margin-left: 12px;
-}
-#geo-locator-cont span,
-#address span {
-  display: block;
-  margin-left: 6px;
-  font-size: 0.9em;
-  color:rgba(255,255,255, 0.75);
-}
-
-#geo-locator-cont #geo-btn {
+/* Switch */
+.upload-form-wrapper .title-hr-div .title-wrapper {
   width: 100%;
-  margin-top: 12px;
-  margin-bottom: 12px;
-  padding: 6px;
-  border: 1.5pt solid rgba(255,255,255, 0.35);
-  background-color: rgba(255,255,255, 0.125);
-  color: rgba(255,255,255, 0.75);
+  text-align: center;
+}
+.upload-form-wrapper .title-hr-div .title-wrapper h4{
+  margin-top: 0;
+  margin-bottom: 16px;
+  cursor: pointer;
+  color: rgba(0, 0, 0, 0.80);
+}
+.upload-form-wrapper .title-hr-div .l-s-not-selected h4 {
+  color: rgba(0, 0, 0, 0.40);
+}
+.title-hr-div .l-s-not-selected h4:hover {
+  color: rgba(0, 0, 0, 0.60);
+}
+.title-hr-div hr {
+  border: none;
+  border-top: 1.5pt solid rgba(0, 0, 0, 0.40);
+  margin-bottom: 0;
+}
+.title-hr-div #left,
+.title-hr-div #right {
+  border-top: 1.5pt solid #000000;
+}
+
+/* FORM */
+.form-wrapper {
+  width: 100%;
+}
+
+/* GEOLOCATE */
+.form-wrapper #geo-locator-cont {
+  position: relative;
+  width: 100%;
+  height: 270px;
+}
+
+#geo-btn {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 50px;
+  width: 50%;
+  border: none;
+  border-radius: 50px;
+  background-color: rgba(0, 0, 0, 0.80);
+  font-weight: 600;
+  color: #ffffff;
+  filter: drop-shadow(3px 8px 4px rgba(0, 0, 0, 0.2)); /*drop-shadow(0px 10px 4px rgba(0, 0, 0, 0.2));*/
   cursor: pointer;
 }
-#geo-locator-cont .lat-long-cont p{
-  display: inline-block;
-  margin: 4px 0px;
-  padding-left: 6px;
-  font-size: 0.9em;
-  color:rgba(255,255,255, 0.75);
+#coordinates {
+  text-align: left;
 }
-#geo-locator-cont .lat-long-cont span {
+.lat-long-cont {
   display: inline-block;
+  width: calc(50% - 5px);
 }
-#geo-locator-cont .lat-long-cont hr {
+.left {
+  margin-right: 10px;
+}
+.lat-long-cont p {
+  color:rgba(0, 0, 0, 0.40);
   margin-top: 0;
-  border: none;
-  border-bottom: 1pt solid rgba(255,255,255, 0.35);
+  margin-bottom: 8px;
+  padding-left: 6px;
 }
-#address input {
-  margin-top: 6px;
+.lat-long-cont span {
+  color:rgba(0, 0, 0, 0.80);
+  margin-left: 4px;
 }
 
-#nbhd-selection {
-  border: none;
-  padding: 0;
-  margin: 0;
-}
-label {
-  padding-left: 6px;
-  font-size: 0.9em;
-  color:rgba(255,255,255, 0.75);
-}
-select {
-  margin-left: 12px;
+/* ADDRESS */
+.form-wrapper input {
+  display: block;
+  width: calc(100% - 12px);
+  margin: 18px 0px 18px 0px;
   padding: 12px 6px;
+  border: none;
+  border-bottom: 1pt solid rgba(0,0,0, 0.6);
   font-size: 0.9em;
-  color:rgba(255,255,255, 0.75);
-  background-color: #000000;
+  text-align: right;
 }
-select:focus {
+.form-wrapper input:focus {
   outline: none;
+  border-bottom: 1pt solid rgba(0,0,0, 1);
+}
+input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: rgba(0,0,0, 0.4);
+  opacity: 1; /* Firefox */
+  font-family: 'Arimo', Arial, sans-serif;
+  font-weight: 600;
+  text-align: left;
+}
+.login-signup-container input:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: rgba(0,0,0, 0.4);
+  font-family: 'Arimo', Arial, sans-serif;
+  font-weight: 600;
+  text-align: left;
+}
+.login-signup-container input::-ms-input-placeholder { /* Microsoft Edge */
+  color: rgba(0,0,0, 0.4);
+  font-family: 'Arimo', Arial, sans-serif;
+  font-weight: 600;
+  text-align: left;
 }

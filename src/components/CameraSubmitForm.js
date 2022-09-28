@@ -63,7 +63,7 @@ function CameraSubmitForm( { /*currentUser*/ } ){
   }
 
   return (
-    <div id="submit-camera" className="four-ten">
+    <div id="submit-camera" className="upload-form-wrapper ">
       <h3>Submit Surveillance Camera</h3>
 
       <form onSubmit={handleSubmit}>
