@@ -1,4 +1,4 @@
-function Address( { formData, handleChange, handleSwitch } ){
+function Type( { formData, handleChange, handleSwitch } ){
 
   return (
     <div className='upload-form-wrapper'>
@@ -52,4 +52,4 @@ function Address( { formData, handleChange, handleSwitch } ){
   )
 }
 
-export default Address;
+export default Type;

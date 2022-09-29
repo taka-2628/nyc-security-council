@@ -1,9 +1,7 @@
 import { useState } from "react";
-import { Outlet } from 'react-router-dom';
 
 import '../stylesheets/Contribute.css';
 
-import CameraSubmitForm from "./CameraSubmitForm";
 import CloseBtn from "./Buttons/CloseBtn";
 import ReturnBtn from './Buttons/ReturnBtn';
 import GeolocateAddress from './Forms/GeolocateAddress';
@@ -33,7 +31,6 @@ function Contribute(){
     <div id="contribute" className="grid-container">
       <CloseBtn />
       <ReturnBtn />
-      {/*<Outlet />*/}
 
       {
         (viewState === "geo-add") ? 
@@ -41,7 +38,9 @@ function Contribute(){
         null 
       }
       {
-        
+        (viewState === "image-type-other") ? 
+        <GeolocateAddress  /> : 
+        null
       }
       
       
