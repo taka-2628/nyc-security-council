@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/nyc-security-council/static/css/main.cadc02ff.css",
-    "main.js": "/nyc-security-council/static/js/main.c1008954.js",
+    "main.css": "/nyc-security-council/static/css/main.ddd572d5.css",
+    "main.js": "/nyc-security-council/static/js/main.64c73285.js",
     "static/js/483.4648a2ad.chunk.js": "/nyc-security-council/static/js/483.4648a2ad.chunk.js",
     "static/js/787.24845d18.chunk.js": "/nyc-security-council/static/js/787.24845d18.chunk.js",
     "static/media/landing_placeholder.gif": "/nyc-security-council/static/media/landing_placeholder.135610db14c843a02f9b.gif",
     "index.html": "/nyc-security-council/index.html",
-    "main.cadc02ff.css.map": "/nyc-security-council/static/css/main.cadc02ff.css.map",
-    "main.c1008954.js.map": "/nyc-security-council/static/js/main.c1008954.js.map",
+    "main.ddd572d5.css.map": "/nyc-security-council/static/css/main.ddd572d5.css.map",
+    "main.64c73285.js.map": "/nyc-security-council/static/js/main.64c73285.js.map",
     "483.4648a2ad.chunk.js.map": "/nyc-security-council/static/js/483.4648a2ad.chunk.js.map",
     "787.24845d18.chunk.js.map": "/nyc-security-council/static/js/787.24845d18.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.cadc02ff.css",
-    "static/js/main.c1008954.js"
+    "static/css/main.ddd572d5.css",
+    "static/js/main.64c73285.js"
   ]
 }
