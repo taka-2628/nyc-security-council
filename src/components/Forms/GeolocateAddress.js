@@ -2,10 +2,10 @@ import { useState } from "react";
 import '../../stylesheets/Contribute.css';
 
 import Geolocate from "./Geolocate";
-import ProgressBtn from "../Buttons/ProgressBtn";
 import Address from "./Address";
+import ProgressBtn from "../Buttons/ProgressBtn";
 
-function GeolocateAddress({ coordinates, setCoordinates, formData, handleChange }){
+function GeolocateAddress({ coordinates, setCoordinates, formData, handleChange, onStepChange }){
   const [ isGeolocate, setIsGeolocate ] = useState(true);
 
   function handleSwitch(){
@@ -13,15 +13,15 @@ function GeolocateAddress({ coordinates, setCoordinates, formData, handleChange 
   }
 
   return(
-    <div id="upload-form-cont" className="four-ten">
-      
+    
+    <>
       {
         isGeolocate ?
-        <Geolocate coordinates={coordinates} setCoordinates={setCoordinates} handleSwitch={handleSwitch} /> :
-        <Address formData={formData} handleChange={handleChange} handleSwitch={handleSwitch} />
+        <Geolocate coordinates={coordinates} setCoordinates={setCoordinates} handleSwitch={handleSwitch} onStepChange={onStepChange}/> :
+        <Address formData={formData} handleChange={handleChange} handleSwitch={handleSwitch} onStepChange={onStepChange}/>
       }
-      <ProgressBtn/>
-    </div>
+    </>
+    
   )
 }
 

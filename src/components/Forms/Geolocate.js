@@ -1,6 +1,8 @@
 import { useState } from "react";
 
-function Geolocate( { coordinates, setCoordinates, handleSwitch } ){
+import ProgressBtn from "../Buttons/ProgressBtn";
+
+function Geolocate( { coordinates, setCoordinates, handleSwitch, onStepChange } ){
   const [coordiError, setCoordiError] = useState(null);
 
   function getLocation() {
@@ -19,31 +21,34 @@ function Geolocate( { coordinates, setCoordinates, handleSwitch } ){
   }
 
   return (
-    <div className='upload-form-wrapper'>
-      <div className="title-hr-div">
-        <div>
-          <div className="title-wrapper">
-            <h4>Geolocate Current Location</h4>
+    <div id="upload-form-cont" className="four-ten">
+      <div className='upload-form-wrapper'>
+        <div className="title-hr-div">
+          <div>
+            <div className="title-wrapper">
+              <h4>Geolocate Current Location</h4>
+            </div>
+            <hr className="selected-hr"/>
           </div>
-          <hr id="left" />
+          <div>
+            <div className="title-wrapper l-s-not-selected">
+              <h4 onClick={handleSwitch}>Manually Input Location</h4>
+            </div>
+            <hr/>
+          </div>
         </div>
-        <div>
-          <div className="title-wrapper l-s-not-selected">
-            <h4 onClick={handleSwitch}>Manually Input Location</h4>
+        <div className="form-wrapper">
+          <div id="geo-locator-cont">
+            <button id="geo-btn" onClick={() => getLocation()}>GEOLOCATE</button>
+            { coordiError ? <span>{coordiError}</span> : null}
           </div>
-          <hr/>
+          <div id="coordinates">
+            <div className="lat-long-cont left"><p>Latitude: {coordinates ? <span>{coordinates[1]}</span> : null}</p><hr/></div> 
+            <div className="lat-long-cont right"><p>Longitude: {coordinates ? <span>{coordinates[0]}</span> : null}</p><hr/></div> 
+          </div>
         </div>
       </div>
-      <div className="form-wrapper">
-        <div id="geo-locator-cont">
-          <button id="geo-btn" onClick={() => getLocation()}>GEOLOCATE</button>
-          { coordiError ? <span>{coordiError}</span> : null}
-        </div>
-        <div id="coordinates">
-          <div className="lat-long-cont left"><p>Latitude: {coordinates ? <span>{coordinates[1]}</span> : null}</p><hr/></div> 
-          <div className="lat-long-cont right"><p>Longitude: {coordinates ? <span>{coordinates[0]}</span> : null}</p><hr/></div> 
-        </div>
-      </div>
+      <ProgressBtn onStepChange={onStepChange}/>
     </div>
   )
 }

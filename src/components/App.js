@@ -17,13 +17,11 @@ function App() {
       <div className="app">
         <main>
           <Routes>
-            <Route  path="/" element={ <Home /> } />
+            <Route path="/" element={ <Home /> } />
             <Route exact path="/about" element={ <About /> } />
             <Route exact path="/Map" element={ <MapContainer MAPBOX_TOKEN={MAPBOX_TOKEN}/> } />
             <Route exact path="/signin" element={ <LoginSignup /> } />
-            <Route path="/contribute" index element={ <Contribute /> } >
-              {/*<Route path="/initial" element={ <p>initial</p> }/>*/}
-            </Route>
+            <Route exact path="/contribute" element={ <Contribute /> } />
           </Routes>
         </main>
       </div>

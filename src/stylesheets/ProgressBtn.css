@@ -14,7 +14,7 @@
   color: rgba(255,255,255, 0.5);
 }
 
-.progress-btn-wrapper span.active-btn {
+.progress-btn-wrapper span.active-submit {
   color: #ffffff;
   cursor: pointer;
   animation: MoveUpDown 2s linear infinite;
