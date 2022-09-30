@@ -25,6 +25,7 @@ function Contribute(){
       intersection: "",
       zipcode: "",
       borough: "",
+      image_url: "",
     }
   );
 
@@ -40,7 +41,7 @@ function Contribute(){
       case 0:
         return <GeolocateAddress coordinates={coordinates} setCoordinates={setCoordinates} formData={formData} handleChange={handleChange} onStepChange={onStepChange}/>;
       case 1:
-        return <Image formData={formData} handleChange={handleChange} onStepChange={onStepChange} />;
+        return <Image handleChange={handleChange} onStepChange={onStepChange} />;
       case 2:
         return <Type formData={formData} handleChange={handleChange} onStepChange={onStepChange} />;
       case 3:
