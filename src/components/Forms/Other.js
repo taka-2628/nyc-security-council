@@ -7,15 +7,9 @@ function Other( { formData, handleChange, onStepChange } ){
       <div className='upload-form-wrapper'>
         <div className="title-hr-div">
           <div className="three-parts">
-            <div className="title-wrapper l-s-not-selected">
-              <h4>Upload Image</h4>
-            </div>
             <hr/>
           </div>
           <div className="three-parts">
-            <div className="title-wrapper l-s-not-selected">
-              <h4>Select Type</h4>
-            </div>
             <hr/>
           </div>
           <div className="three-parts">

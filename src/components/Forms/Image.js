@@ -37,15 +37,9 @@ function Image( { handleChange, onStepChange } ){
             <hr className="selected-hr"/>
           </div>
           <div className="three-parts">
-            <div className="title-wrapper l-s-not-selected">
-              <h4>Select Type</h4>
-            </div>
             <hr/>
           </div>
           <div className="three-parts">
-            <div className="title-wrapper l-s-not-selected">
-              <h4>Other</h4>
-            </div>
             <hr/>
           </div>
         </div>

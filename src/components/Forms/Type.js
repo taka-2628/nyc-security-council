@@ -11,9 +11,6 @@ function Type( { typeCheckedState, handleOnChangeType, onStepChange } ){
       <div className='upload-form-wrapper'>
         <div className="title-hr-div">
           <div className="three-parts">
-            <div className="title-wrapper l-s-not-selected">
-              <h4>Upload Image</h4>
-            </div>
             <hr/>
           </div>
           <div className="three-parts">
@@ -23,9 +20,6 @@ function Type( { typeCheckedState, handleOnChangeType, onStepChange } ){
             <hr className="selected-hr"/>
           </div>
           <div className="three-parts">
-            <div className="title-wrapper l-s-not-selected">
-              <h4>Other</h4>
-            </div>
             <hr/>
           </div>
         </div>
