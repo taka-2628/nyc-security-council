@@ -144,30 +144,30 @@
   width: 95%;
   margin: 0 auto;
 }
-#type-radio-cont {
+#type-select-cont {
   width: 100%;
   display: flex;
   justify-content: space-between;
 }
-.type-radio-wrapper {
+.type-select-wrapper {
   position: relative;
   width: 30%;
 }
-.type-radio-wrapper button {
+.type-select-wrapper button {
   width: 100%;
   opacity: 0.3;
 }
-.type-radio-wrapper button:hover {
+.type-select-wrapper button:hover {
   opacity: 0.6;
 }
-.type-radio-wrapper button.selected-type-btn {
+.type-select-wrapper button.selected-type-btn {
   opacity: 1;
 }
-.type-radio-wrapper button div{
+.type-select-wrapper button div{
   height: 2em;
   margin-top: 8px;
 }
-.type-radio-wrapper button img {
+.type-select-wrapper button img {
   width: 100%;
 }
 
