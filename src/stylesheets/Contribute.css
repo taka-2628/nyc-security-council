@@ -19,7 +19,7 @@
   width: 50%;
 }
 /* Image, Type, Other */
-.upload-form-wrapper .title-hr-div .three-parts{
+.upload-form-wrapper .title-hr-div .three-parts {
   display: inline-block;
   width: 33.333%;
 }
@@ -136,6 +136,59 @@
   text-align: center;
 }
 
+/* TYPE */
+.form-wrapper p {
+  color: rgba(0, 0, 0, 0.80);
+}
+.type-cont {
+  width: 95%;
+  margin: 0 auto;
+}
+#type-radio-cont {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.type-radio-wrapper {
+  position: relative;
+  width: 30%;
+}
+.type-radio-wrapper button {
+  width: 100%;
+  opacity: 0.3;
+}
+.type-radio-wrapper button:hover {
+  opacity: 0.6;
+}
+.type-radio-wrapper button.selected-type-btn {
+  opacity: 1;
+}
+.type-radio-wrapper button div{
+  height: 2em;
+  margin-top: 8px;
+}
+.type-radio-wrapper button img {
+  width: 100%;
+}
+
+/*
+.form-wrapper .radio-type {
+  position: absolute;
+  margin: 0;
+  opacity: 0;
+  z-index: 5;
+}
+.form-wrapper .label-image {
+  display: inline-block;
+  opacity: 0.3;
+}
+.form-wrapper .label-image img {
+  width: 80%;
+}
+.form-wrapper .radio-type:checked + label {
+  opacity: 1;
+}
+*/
 /* ADDRESS */
 .form-wrapper input {
   display: block;
