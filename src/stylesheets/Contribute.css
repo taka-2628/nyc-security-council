@@ -32,14 +32,11 @@
 .upload-form-wrapper .title-hr-div .title-wrapper h4{
   margin-top: 0;
   margin-bottom: 16px;
-  cursor: pointer;
+  cursor: default;
   color: rgba(0, 0, 0, 0.80);
 }
 .upload-form-wrapper .title-hr-div .l-s-not-selected h4 {
   color: rgba(0, 0, 0, 0.40);
-}
-.title-hr-div .l-s-not-selected h4:hover {
-  color: rgba(0, 0, 0, 0.60);
 }
 .title-hr-div hr {
   border: none;
