@@ -26,22 +26,22 @@ function Type( { typeCheckedState, handleOnChangeType, onStepChange } ){
         </div>
 
         <div className="form-wrapper">
-          <div className="type-cont">
+          <div className="type-addinfo-cont">
             <p>Select camera type</p>
-            <div id="type-select-cont">
-              <span className="type-select-wrapper">
+            <div className="selection-btn-cont">
+              <span className="selection-btn-wrapper">
                 <button className={typeCheckedState[0] ? "selected-type-btn" : null } onClick={() => handleOnChangeType(0)}>
                   <div>Dome/PTZ Camera</div>
                   <img src={cameraType1}></img>
                 </button>
               </span>
-              <span className="type-select-wrapper">
+              <span className="selection-btn-wrapper">
                 <button className={typeCheckedState[1] ? "selected-type-btn" : null } onClick={() => handleOnChangeType(1)}>
                   <div>Bullet Camera</div>
                   <img src={cameraType2} ></img>
                 </button>
               </span>
-              <span className="type-select-wrapper">
+              <span className="selection-btn-wrapper">
                 <button className={typeCheckedState[2] ? "selected-type-btn" : null } onClick={() => handleOnChangeType(2)}>
                   <div>Other</div>
                   <img src={cameraType3}></img>
@@ -50,7 +50,7 @@ function Type( { typeCheckedState, handleOnChangeType, onStepChange } ){
             </div>
           </div>
         </div>
-        
+
       </div>
       <ProgressBtn onStepChange={onStepChange}/>
     </div>
