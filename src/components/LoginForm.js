@@ -1,8 +1,13 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import {useNavigate} from 'react-router-dom';
 import '../stylesheets/LoginSignup.css';
 
-function LoginForm( { /*setCurrentUser*/ handleSwitch } ){
+import { UserContext } from '../context/user';
+
+function LoginForm( { handleSwitch } ){
+  const { setUser } = useContext(UserContext);
+
+
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
@@ -22,7 +27,7 @@ function LoginForm( { /*setCurrentUser*/ handleSwitch } ){
     }).then((r) => {
       if (r.ok) {
         r.json().then((user) => {
-          //setCurrentUser(user);
+          setUser(user);
           navigate("/about");
         });
       } else {

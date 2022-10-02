@@ -8,7 +8,7 @@ nav {
 nav {
   margin-top: 10vh;
 }
-
+nav .logout-btn,
 nav a {
   display: block;
   color: #ffffff;
@@ -16,6 +16,7 @@ nav a {
   font-size: 1.25em; /* 20px */
   padding-bottom: 10px;
 }
+nav .logout-btn:hover,
 nav a:hover {
   font-style: italic;
   text-decoration: none;
@@ -38,6 +39,7 @@ nav a:hover {
   z-index: 10;
   text-align: right;
 }
+#nav-fullscreen .logout-btn,
 #nav-fullscreen a {
   display: inline-block;
   margin-left: 12px;
@@ -46,6 +48,7 @@ nav a:hover {
   border-radius: 20px;
   font-size: 1.15em;
 }
+#nav-fullscreen .logout-btn:hover,
 #nav-fullscreen a:hover {
   color: #000000;
   background-color: #ffffff;

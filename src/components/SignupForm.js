@@ -1,8 +1,13 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { useNavigate } from 'react-router-dom';
 import '../stylesheets/LoginSignup.css';
 
-function SignupForm( { /*setCurrentUser*/ handleSwitch } ){
+import { UserContext } from '../context/user';
+
+function SignupForm( { handleSwitch } ){
+  const { setUser } = useContext(UserContext);
+
+
   const [fullname, setFullname] = useState("");
   const [dob, setDob] = useState("");
 
@@ -57,7 +62,7 @@ function SignupForm( { /*setCurrentUser*/ handleSwitch } ){
     }).then((r) => {
       if (r.ok) {
         r.json().then((user) => {
-          //setCurrentUser(user);
+          setUser(user);
           navigate("/");
         });
       } else {
