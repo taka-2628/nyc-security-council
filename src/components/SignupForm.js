@@ -7,6 +7,8 @@ function SignupForm( { /*setCurrentUser*/ handleSwitch } ){
   const [dob, setDob] = useState("");
 
   const [gender, setGender] = useState("");
+  const [occupation, setOccupation] = useState("");
+
   const [phone, setPhone] = useState("");
   const [addressOne, setAddressOne] = useState("");
   const [addressTwo, setAddressTwo] = useState("");
@@ -41,6 +43,7 @@ function SignupForm( { /*setCurrentUser*/ handleSwitch } ){
         password_confirmation: passwordConfirmation,
         email,
         fullname,
+        phone,
         address_1: addressOne,
         address_2: addressTwo,
         city,
@@ -48,7 +51,7 @@ function SignupForm( { /*setCurrentUser*/ handleSwitch } ){
         zipcode,
         date_of_birth: dob,
         gender,
-        //occupation,
+        occupation,
         citizenship
       }),
     }).then((r) => {
@@ -133,13 +136,22 @@ function SignupForm( { /*setCurrentUser*/ handleSwitch } ){
                 />
                 {
                   (survLevel === "high") ?
-                  <input
-                    type="text"
-                    id="gender"
-                    value={gender}
-                    placeholder="Gender"
-                    onChange={(e) => setGender(e.target.value)}
-                  /> :
+                  <>
+                    <input
+                      type="text"
+                      id="gender"
+                      value={gender}
+                      placeholder="Gender"
+                      onChange={(e) => setGender(e.target.value)}
+                    />
+                    <input
+                      type="text"
+                      id="occupation"
+                      value={occupation}
+                      placeholder="Occupation"
+                      onChange={(e) => setOccupation(e.target.value)}
+                    />
+                  </> :
                   null
                 }
               </div> :
