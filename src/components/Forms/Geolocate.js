@@ -38,8 +38,8 @@ function Geolocate( { coordinates, setCoordinates, handleSwitch, onStepChange } 
           </div>
         </div>
         <div className="form-wrapper">
-          <div id="geo-locator-cont">
-            <button id="geo-btn" onClick={() => getLocation()}>GEOLOCATE</button>
+          <div className="button-center-cont">
+            <button className="center-btn" onClick={() => getLocation()}>GEOLOCATE</button>
             { coordiError ? <span>{coordiError}</span> : null}
           </div>
           <div id="coordinates">

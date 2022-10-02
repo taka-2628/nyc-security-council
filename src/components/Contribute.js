@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { Outlet, useParams } from 'react-router-dom';
 
 import '../stylesheets/Contribute.css';
 
@@ -10,6 +9,7 @@ import GeolocateAddress from './Forms/GeolocateAddress';
 import Image from "./Forms/Image";
 import Type from "./Forms/Type";
 import Other from "./Forms/Other";
+import Submit from "./Forms/Submit";
 
 function Contribute(){
   const [step, setStep] = useState(0);
@@ -38,6 +38,7 @@ function Contribute(){
   }
 
   const [typeCheckedState, setTypeCheckedState] = useState( [true, false, false] );
+  const [onwerCheckedState, setOwnerCheckedState] = useState( [true, false, false] );
 
   function handleOnChangeType(position){
     const clickedState = typeCheckedState[position];
@@ -48,8 +49,6 @@ function Contribute(){
     setTypeCheckedState(updatedCheckedState);
   };
 
-  const [onwerCheckedState, setOwnerCheckedState] = useState( [true, false, false] );
-
   function handleOnChangeOwner(position){
     const clickedState = onwerCheckedState[position];
 
@@ -58,6 +57,40 @@ function Contribute(){
     console.log(updatedCheckedState);
     setOwnerCheckedState(updatedCheckedState);
   };
+
+  function handleSubmit(){
+    const data = { ...formData, geometry: coordinates}
+    console.log(data);
+    
+    /*
+    fetch("/projects", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        user_id: currentUser.id,
+        title,
+        subtitle,
+        description,
+        image,
+        url,
+        github_url: github,
+        genres: selectedGenres,
+        technologies: selectedTechs
+      }),
+    }).then((r) => {
+      if (r.ok) {
+        r.json().then((project) => {
+          setProjects([...projects, project])
+          navigate("/");
+        });
+      } else {
+        r.json().then((err) => setErrors(err.errors));
+      }
+    });
+    */
+  }
   
   const conditionalComponent = () => {
     switch (step) {
@@ -69,7 +102,9 @@ function Contribute(){
         return <Type typeCheckedState={typeCheckedState} handleOnChangeType={handleOnChangeType} onStepChange={onStepChange} />;
       case 3:
         return <Other onwerCheckedState={onwerCheckedState} handleOnChangeOwner={handleOnChangeOwner} formData={formData} handleChange={handleChange} onStepChange={onStepChange} />;
-      default:
+      case 4: 
+        return <Submit handleSubmit={handleSubmit} />
+      default: 
         return <GeolocateAddress coordinates={coordinates} setCoordinates={setCoordinates} formData={formData} handleChange={handleChange} onStepChange={onStepChange}/>;
     }
   }
