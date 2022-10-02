@@ -29,8 +29,8 @@ function SignupForm( { /*setCurrentUser*/ handleSwitch } ){
   function handleSubmit(e){
     e.preventDefault();  
     setErrors([]);
-    /*
-    fetch("/signup", {
+    
+    fetch("http://localhost:3000/signup", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -39,22 +39,29 @@ function SignupForm( { /*setCurrentUser*/ handleSwitch } ){
         username,
         password,
         password_confirmation: passwordConfirmation,
-        profile_image: imageUrl,
-        intro,
-        website: websiteUrl,
-        github: githubUrl
+        email,
+        fullname,
+        address_1: addressOne,
+        address_2: addressTwo,
+        city,
+        state,
+        zipcode,
+        date_of_birth: dob,
+        gender,
+        //occupation,
+        citizenship
       }),
     }).then((r) => {
       if (r.ok) {
         r.json().then((user) => {
-          setCurrentUser(user);
+          //setCurrentUser(user);
           navigate("/");
         });
       } else {
         r.json().then((err) => setErrors(err.errors));
       }
     });
-    */
+    
   }
 
   return (

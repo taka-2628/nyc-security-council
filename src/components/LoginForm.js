@@ -12,8 +12,8 @@ function LoginForm( { /*setCurrentUser*/ handleSwitch } ){
 
   function handleSubmit(e){
     e.preventDefault();
-    /*
-    fetch("/login", {
+    
+    fetch("http://localhost:3000/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -22,14 +22,13 @@ function LoginForm( { /*setCurrentUser*/ handleSwitch } ){
     }).then((r) => {
       if (r.ok) {
         r.json().then((user) => {
-          setCurrentUser(user);
-          navigate("/");
+          //setCurrentUser(user);
+          navigate("/about");
         });
       } else {
         r.json().then((err) => setError(err.error));
       }
     });
-    */
   }
 
   return (
