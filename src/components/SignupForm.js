@@ -7,7 +7,7 @@ import { UserContext } from '../context/user';
 function SignupForm( { handleSwitch, neighborhoods, socialMedia } ){
   const { setUser } = useContext(UserContext);
 
-  const [neighborhoodId, setNeighborhoodId] = useState("");
+  const [neighborhoodId, setNeighborhoodId] = useState(null);
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [passwordConfirmation, setPasswordConfirmation] = useState("");
@@ -83,8 +83,12 @@ function SignupForm( { handleSwitch, neighborhoods, socialMedia } ){
   }
 
   function handleNbhdChange(e){
-    const newNbhdID = e.target.value + 1;
-    setNeighborhoodId(newNbhdID);
+    if (e.target.value){
+      const newNbhdID = e.target.value + 1;
+      setNeighborhoodId(newNbhdID);
+    } else {
+      setNeighborhoodId(null);
+    }
   }
 
   const neighborhoodOptions = neighborhoods.map((neighborhood, index) => {
@@ -306,7 +310,7 @@ function SignupForm( { handleSwitch, neighborhoods, socialMedia } ){
                 id="neighborhoods-select"
                 onChange={(e) => handleNbhdChange(e)}
               > 
-                <option id="nbhd-default-option" value="" onChange={() => setNeighborhoodId("")}>--Choose Neighborhood--</option>
+                <option id="nbhd-default-option" value="" >--Choose Neighborhood--</option>
                 {neighborhoodOptions}
               </select>
             
@@ -317,7 +321,7 @@ function SignupForm( { handleSwitch, neighborhoods, socialMedia } ){
               <input 
                 type="submit" 
                 value="&#x203A;"
-                className={ ( username && password && passwordConfirmation && email ) ? "active-submit" : ""}
+                className={ ( username && password && passwordConfirmation && email && neighborhoodId) ? "active-submit" : ""}
               />
             </div>
           </div>
