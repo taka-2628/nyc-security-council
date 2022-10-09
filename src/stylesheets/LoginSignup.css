@@ -144,6 +144,73 @@
   padding: 0;
 }
 
+/* Socila Media Multiple Choice */
+.social-media-cont {
+  border: 1.5pt solid rgba(255,255,255, 0.25);
+}
+.social-media-cont legend {
+  color: rgba(255,255,255, 0.5);
+  font-size: 0.9em;
+  font-weight: 600;
+}
+.social-media-cont label.social-media-choices {
+  position: relative;
+  display: inline-block;
+  width: calc(50% - 35px);
+  padding-left: 35px;
+  margin-bottom: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the Browser's Default Checkbox */
+.social-media-cont input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a Custom Checkbox */
+.social-media-cont .custom-checkbox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 18px;
+  width: 18px;
+  border: 1px solid #ffffff;
+  background-color: #000000;
+}
+
+/* Create Check-mark in Custom Checkbox */
+/* hide the checkmark when default check box is not checked */
+.social-media-cont .custom-checkbox:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+/* display the checkmark when checked */
+.social-media-cont input:checked ~ .custom-checkbox:after {
+  display: block;
+}
+/* style checkmark using webkit */
+.social-media-cont .custom-checkbox:after {
+  top: 1px;
+  left: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid #ffffff;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
 /* SUBMIT */
 .login-signup-container .submit-cont {
   position: relative;

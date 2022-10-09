@@ -27,6 +27,8 @@ function SignupForm( { handleSwitch, neighborhoods, socialMedia } ){
   const [occupation, setOccupation] = useState("");
   const [citizenship, setCitizenship] = useState("");
 
+  const [socialMediaCheckedState, setSocialMediaCheckedState] = useState( new Array(8).fill(false) );
+
   const [errors, setErrors] = useState([]);
 
   const [ survLevel, setSurvLevel ] = useState("low");
@@ -36,6 +38,13 @@ function SignupForm( { handleSwitch, neighborhoods, socialMedia } ){
   function handleSubmit(e){
     e.preventDefault();  
     setErrors([]);
+
+    const selectedSocialMedia = socialMediaCheckedState.reduce((returns, sm, index) => {
+      if(sm){
+        returns.push({id: index + 1})
+      }
+      return returns
+    }, [])
     
     fetch("http://localhost:3000/signup", {
       method: "POST",
@@ -58,7 +67,8 @@ function SignupForm( { handleSwitch, neighborhoods, socialMedia } ){
         date_of_birth: dob,
         gender,
         occupation,
-        citizenship
+        citizenship,
+        social_media_platforms: selectedSocialMedia
       }),
     }).then((r) => {
       if (r.ok) {
@@ -85,6 +95,27 @@ function SignupForm( { handleSwitch, neighborhoods, socialMedia } ){
       >
         {neighborhood.neighborhood}
       </option>
+    )
+  })
+
+  const handleOnChangeSocialMedia = (position) => {
+    const updatedCheckedState = socialMediaCheckedState.map((item, index) =>
+      index === position ? !item : item
+    );
+    console.log(updatedCheckedState)
+    setSocialMediaCheckedState(updatedCheckedState);
+  };
+
+  const socialMediaChoices = socialMedia.map((sm, index) => {
+    return (
+        <label key={sm.id} className="social-media-choices" >{sm.social_media}
+          <input 
+            type="checkbox" 
+            checked={socialMediaCheckedState[index]}
+            onChange={() => handleOnChangeSocialMedia(index)}
+          />
+          <span className="custom-checkbox"></span>
+        </label> 
     )
   })
 
@@ -172,6 +203,10 @@ function SignupForm( { handleSwitch, neighborhoods, socialMedia } ){
                       placeholder="Occupation"
                       onChange={(e) => setOccupation(e.target.value)}
                     />
+                    <fieldset className="social-media-cont">
+                      <legend>Social Media</legend>
+                      { socialMediaChoices }
+                    </fieldset>
                   </> :
                   null
                 }
