@@ -4,28 +4,28 @@ import '../stylesheets/LoginSignup.css';
 
 import { UserContext } from '../context/user';
 
-function SignupForm( { handleSwitch } ){
+function SignupForm( { handleSwitch, neighborhoods, socialMedia } ){
   const { setUser } = useContext(UserContext);
 
+  const [neighborhoodId, setNeighborhoodId] = useState("");
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const [passwordConfirmation, setPasswordConfirmation] = useState("");
+  const [email, setEmail] = useState("");
 
   const [fullname, setFullname] = useState("");
-  const [dob, setDob] = useState("");
-
-  const [gender, setGender] = useState("");
-  const [occupation, setOccupation] = useState("");
-
+  
   const [phone, setPhone] = useState("");
   const [addressOne, setAddressOne] = useState("");
   const [addressTwo, setAddressTwo] = useState("");
   const [city, setCity] = useState("");
   const [state, setState] = useState("");
   const [zipcode, setZipcode] = useState("");
+  
+  const [dob, setDob] = useState("");
+  const [gender, setGender] = useState("");
+  const [occupation, setOccupation] = useState("");
   const [citizenship, setCitizenship] = useState("");
-
-  const [username, setUsername] = useState("");
-  const [password, setPassword] = useState("");
-  const [passwordConfirmation, setPasswordConfirmation] = useState("");
-  const [email, setEmail] = useState("");
 
   const [errors, setErrors] = useState([]);
 
@@ -43,6 +43,7 @@ function SignupForm( { handleSwitch } ){
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
+        neighborhood_id: neighborhoodId,
         username,
         password,
         password_confirmation: passwordConfirmation,
@@ -69,8 +70,23 @@ function SignupForm( { handleSwitch } ){
         r.json().then((err) => setErrors(err.errors));
       }
     });
-    
   }
+
+  function handleNbhdChange(e){
+    const newNbhdID = e.target.value + 1;
+    setNeighborhoodId(newNbhdID);
+  }
+
+  const neighborhoodOptions = neighborhoods.map((neighborhood, index) => {
+    return(
+      <option 
+        key={index}
+        value={index}
+      >
+        {neighborhood.neighborhood}
+      </option>
+    )
+  })
 
   return (
     <div id="signup" className="five-nine">
@@ -249,6 +265,16 @@ function SignupForm( { handleSwitch } ){
               onChange={(e) => setPasswordConfirmation(e.target.value)}
               autoComplete="current-password"
             />
+            
+              <select required
+                name="neighborhoods-select" 
+                id="neighborhoods-select"
+                onChange={(e) => handleNbhdChange(e)}
+              > 
+                <option id="nbhd-default-option" value="" onChange={() => setNeighborhoodId("")}>--Choose Neighborhood--</option>
+                {neighborhoodOptions}
+              </select>
+            
           </div>
           
           <div className="submit-cont">

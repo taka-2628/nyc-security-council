@@ -122,6 +122,29 @@
   text-align: left;
 }
 
+/* Neighborhood Select */
+.login-signup-container #neighborhoods-select {
+  width: 100%;
+  padding: 12px 2px;
+  border: none;
+  border-bottom: 1.5pt solid rgba(255,255,255, 0.25);
+  color: #ffffff;
+  background-color: #000000;
+  
+}
+.login-signup-container #neighborhoods-select:focus {
+  outline: none;
+}
+.login-signup-container #neighborhoods-select:invalid {
+  color: rgba(255,255,255, 0.5);
+  
+  font-weight: 600;
+}
+.login-signup-container #neighborhoods-select option {
+  padding: 0;
+}
+
+/* SUBMIT */
 .login-signup-container .submit-cont {
   position: relative;
   top: 100px;

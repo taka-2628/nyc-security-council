@@ -7,7 +7,7 @@ import CloseBtn from "./Buttons/CloseBtn";
 
 
 
-function LoginSignup(){
+function LoginSignup( { neighborhoods, socialMedia } ){
   const [ isLogin, setIsLogin ] = useState(true);
 
   function handleSwitch(){
@@ -19,7 +19,7 @@ function LoginSignup(){
     <div id="login-signup" className="grid-container">
       <NavBar />
       <CloseBtn />
-      { isLogin ? <LoginForm handleSwitch={handleSwitch}/> : <SignupForm handleSwitch={handleSwitch}/> }
+      { isLogin ? <LoginForm handleSwitch={handleSwitch}/> : <SignupForm handleSwitch={handleSwitch} neighborhoods={neighborhoods} socialMedia={socialMedia}/> }
     </div>
   )
 }
